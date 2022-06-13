@@ -1,5 +1,6 @@
 #!/bin/bash
 
+stow alacritty
 stow bin
 stow zsh
 stow vim
