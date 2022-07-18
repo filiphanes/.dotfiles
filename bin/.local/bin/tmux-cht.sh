@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-selected=`cat ~/.dotfiles/tmux-cht-languages | fzf`
+languages="python\ngo\njs\nts\ncore-tools\nbash\nzsh\nlua\nnginx"
+selected=`echo $languages | fzf`
 if [[ -z $selected ]]; then
     exit 0
 fi

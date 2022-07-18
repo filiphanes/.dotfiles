@@ -1,4 +1,22 @@
 set nocompatible
+
+runtime! macros/matchit.vim
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+    Plug '/opt/homebrew/opt/fzf/'
+    Plug 'tpope/vim-fugitive'
+    Plug 'nelstrom/vim-blackboard'
+    Plug 'dyng/ctrlsf.vim'
+    let g:ctrlsf_winsize = '99'
+call plug#end()
+
+" Color scheme
+colorscheme blackboard
+highlight VertSplit cterm=NONE
+
+set path+=**
+
 filetype on
 filetype plugin on
 filetype indent on
@@ -46,14 +64,19 @@ set wildignore+=**/.git/*
 
 let mapleader = " "
 nnoremap Y y$
+nnoremap ; :
 nnoremap <C-p> :FZF!<CR>
-nnoremap <C-e> :!~/.dotfiles/bin/tmux-sessionizer.sh<CR>
+nnoremap <C-f> :CtrlSF <C-r><C-w>
+vnoremap <C-f> :CtrlSF <C-r><C-w>
 nnoremap <leader>s :%s/\<<C-r><C-w>\>//gI<Left><Left><Left>
-nnoremap <silent> <C-f> :silent !tmux neww ~/.dotfiles/bin/tmux-sessionizer.sh<CR>
+
+" Indenting with tab keys
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " Reopen the last edited position in files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-call plug#begin('~/.vim/plugged')
-    Plug '/opt/homebrew/opt/fzf/'
-call plug#end()

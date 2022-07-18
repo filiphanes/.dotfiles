@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/fhanes/work/email/jmap/jmapproxy/mysql/email-db.sql'
+let g:netrw_dirhist_1='/Users/fhanes/work/email/jmap/jmapproxy/mysql'
+let g:netrw_dirhist_0='/Users/fhanes/work/email/jmap/jmapproxy/mysql/email-db.sql'
+let g:netrw_dirhist_9='/Users/fhanes/.oh-my-zsh/plugins/codeclimate'
+let g:netrw_dirhist_8='/Users/fhanes/.oh-my-zsh'
+let g:netrw_dirhist_7='/Users/fhanes/projects/bibliazarok.sk/podcasts/bibliazarok'
+let g:netrw_dirhist_6='/Users/fhanes/projects/bibliazarok.sk/podcasts'
+let g:netrw_dirhist_5='/Users/fhanes/projects/bibliazarok.sk'
+let g:netrw_dirhist_4='/Users/fhanes/projects/bibliazarok.sk/365povzbudeni'
+let g:netrw_dirhist_3='/opt/homebrew/Cellar/vim/9.0.0050/share/vim/vim90/doc'
